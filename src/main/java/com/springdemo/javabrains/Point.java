@@ -17,12 +17,4 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
-	public void myInit(){
-		System.out.println("My init method called for Point");
-	}
-	
-	public void cleanUp(){
-		System.out.println("My destroy method called for Point");
-	}
 }
