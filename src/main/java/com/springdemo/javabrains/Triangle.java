@@ -1,10 +1,10 @@
 package com.springdemo.javabrains;
 
-import java.util.List;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle{
+public class Triangle implements InitializingBean, DisposableBean{
 	
-	private List<Point> points;
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
@@ -31,25 +31,20 @@ public class Triangle{
 
 	public void setPointC(Point pointC) {
 		this.pointC = pointC;
-	}
-	
-	public List<Point> getPoints() {
-		return points;
-	}
+	}	
 
-	public void setPoints(List<Point> points) {
-		this.points = points;
+	public void draw() {		
+		System.out.println("Point A = (" + this.getPointA().getX() + ", " + this.getPointA().getY() + ")");
+		System.out.println("Point B = (" + this.getPointB().getX() + ", " + this.getPointB().getY() + ")");
+		System.out.println("Point C = (" + this.getPointC().getX() + ", " + this.getPointC().getY() + ")");
 	}
 
-	public void draw() {
-		
-//		System.out.println("Point A = (" + this.getPointA().getX() + ", " + this.getPointA().getY() + ")");
-//		System.out.println("Point B = (" + this.getPointB().getX() + ", " + this.getPointB().getY() + ")");
-//		System.out.println("Point C = (" + this.getPointC().getX() + ", " + this.getPointC().getY() + ")");
-		for(Point point : points){
-			System.out.println("Point= (" + point.getX() + ", " + point.getY() + ")");
-		}
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("InitializingBean init method called for Triangle");
+	}
 
+	public void destroy() throws Exception {
+		System.out.println("DisposableBean destroy method called for Triangle");
 	}	
 	
 }

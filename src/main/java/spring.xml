@@ -2,26 +2,11 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-
-	<bean id="parentTriangle" class="com.springdemo.javabrains.Triangle" abstract="true">
-		<property name="points">
-			<list>
-				<ref bean="pointA" />
-			</list>
-		</property>
-	</bean>
-
-	<bean id="triangle1" class="com.springdemo.javabrains.Triangle" parent="parentTriangle">
-		<property name="points">
-			<list merge="true">
-				<ref bean="pointB" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean id="triangle2" class="com.springdemo.javabrains.Triangle" parent="parentTriangle">
+	<bean id="triangle" class="com.springdemo.javabrains.Triangle" autowire="byName">
+		<property name="pointA" ref="pointA" />
 		<property name="pointB" ref="pointB" />
-	</bean>
+		<property name="pointC" ref="pointC" />
+	</bean>	
 
 	<bean id="pointA" class="com.springdemo.javabrains.Point">
 		<property name="x" value="0" />
