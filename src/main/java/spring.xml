@@ -2,27 +2,19 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="triangle" class="com.springdemo.javabrains.Triangle">
-		<property name="points">
-			<list>
-				<ref bean="zeroPoint" />
-				<ref bean="point2" />
-				<ref bean="point3" />
-			</list>
-		</property>
-	</bean>
+	<bean id="triangle" class="com.springdemo.javabrains.Triangle" autowire="byName"/>
 
-	<bean id="zeroPoint" class="com.springdemo.javabrains.Point">
+	<bean id="pointA" class="com.springdemo.javabrains.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
 
-	<bean id="point2" class="com.springdemo.javabrains.Point">
+	<bean id="pointB" class="com.springdemo.javabrains.Point">
 		<property name="x" value="-20" />
 		<property name="y" value="0" />
 	</bean>
 
-	<bean id="point3" class="com.springdemo.javabrains.Point">
+	<bean id="pointC" class="com.springdemo.javabrains.Point">
 		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>
