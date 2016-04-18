@@ -6,8 +6,8 @@
 	</bean>	
 
 	<bean id="pointA" class="com.springdemo.javabrains.Point">
-		<property name="x" value="0" />
-		<property name="y" value="0" />
+		<property name="x" value="${pointA.pointX}" />
+		<property name="y" value="${pointA.pointY}" />
 	</bean>
 
 	<bean id="pointB" class="com.springdemo.javabrains.Point">
@@ -20,5 +20,8 @@
 		<property name="y" value="0" />
 	</bean>
 	
-	<bean class="com.springdemo.javabrains.DisplayNameBeanPostProcessor" />
+	<bean class="com.springdemo.javabrains.MyBeanFactoryPostProcessor" />
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsConfig.properties" />
+	</bean>
 </beans>
