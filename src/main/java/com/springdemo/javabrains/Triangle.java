@@ -1,6 +1,6 @@
 package com.springdemo.javabrains;
 
-public class Triangle{
+public class Triangle implements Shape{
 	
 	private Point pointA;
 	private Point pointB;
@@ -30,7 +30,8 @@ public class Triangle{
 		this.pointC = pointC;
 	}	
 
-	public void draw() {		
+	public void draw() {
+		System.out.println("Drawing Triangle");
 		System.out.println("Point A = (" + this.getPointA().getX() + ", " + this.getPointA().getY() + ")");
 		System.out.println("Point B = (" + this.getPointB().getX() + ", " + this.getPointB().getY() + ")");
 		System.out.println("Point C = (" + this.getPointC().getX() + ", " + this.getPointC().getY() + ")");
