@@ -9,22 +9,22 @@
                            http://www.springframework.org/schema/context 
                            http://www.springframework.org/schema/context/spring-context.xsd">
        
-<!-- 	<bean id="triangle" class="com.springdemo.javabrains.Triangle" autowire="byName" />	 -->
+	<bean id="triangle" class="com.springdemo.javabrains.Triangle"/>	
 
-<!-- 	<bean id="pointA" class="com.springdemo.javabrains.Point"> -->
-<!-- 		<property name="x" value="0" /> -->
-<!-- 		<property name="y" value="0" /> -->
-<!-- 	</bean> -->
+	<bean id="pointA" class="com.springdemo.javabrains.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
 
-<!-- 	<bean id="pointB" class="com.springdemo.javabrains.Point"> -->
-<!-- 		<property name="x" value="-20" /> -->
-<!-- 		<property name="y" value="0" /> -->
-<!-- 	</bean> -->
+	<bean id="pointB" class="com.springdemo.javabrains.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
 
-<!-- 	<bean id="pointC" class="com.springdemo.javabrains.Point"> -->
-<!-- 		<property name="x" value="20" /> -->
-<!-- 		<property name="y" value="0" /> -->
-<!-- 	</bean> -->
+	<bean id="pointC" class="com.springdemo.javabrains.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
 	
 	<bean id="circle" class="com.springdemo.javabrains.Circle" />
 	

@@ -9,8 +9,7 @@ public class Circle implements Shape{
 	
 	public Point getCenter() {
 		return center;
-	}
-	
+	}	
 
 	public void draw() {
 		System.out.println("Drawing Circle");
