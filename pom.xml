@@ -2,14 +2,23 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>gb.bd</groupId>
 	<artifactId>springdemo</artifactId>
+	<packaging>war</packaging>
 	<version>1.0.1-SNAPSHOT</version>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>4.3.0.RC1</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 	</dependencies>
+
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
@@ -20,4 +29,17 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+				<version>2.6</version>
+			</plugin>
+		</plugins>
+	</build>
 </project>
